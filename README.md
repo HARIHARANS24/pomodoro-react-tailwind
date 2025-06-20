@@ -177,15 +177,6 @@ export default {
 
 ---
 
-## 📸 Screenshots
-
-> Add your screenshots here for:
-- Light/Dark Mode toggle
-- Active timer with progress
-- Stats section
-- Pomodoro chart
-
----
 
 ## 🤝 Contributing
 
