@@ -1,6 +1,6 @@
 # ⏱️ Pomodoro Timer App
 
-A modern, feature-rich Pomodoro Timer built with **React**, **TailwindCSS**, and **Framer Motion**. Stay focused and productive with customizable timers, stats tracking, and theme toggling.
+A modern, feature-rich Pomodoro Timer built with **React**, **TailwindCSS**, and **Framer Motion**. Stay focused and productive with customizable timers, progress tracking, and theme toggling.
 
 ---
 
@@ -11,6 +11,9 @@ A modern, feature-rich Pomodoro Timer built with **React**, **TailwindCSS**, and
 ✅ **Visual Progress Indicator (SVG Circle)**  
 ✅ **Light / Dark Theme Toggle**  
 ✅ **Simple Stats Tracking (Completed Sessions)**  
+✅ **Daily Goal Tracking**  
+✅ **Pomodoro Chart (Daily Stats Visualization)**  
+✅ **Desktop Notifications API Support**  
 ✅ **Smooth Animations via Framer Motion**  
 ✅ **LocalStorage Persistence**  
 
@@ -27,7 +30,8 @@ pomodoro-app/
 │   │   ├── TimerDisplay.jsx      // Main timer circle and countdown
 │   │   ├── Controls.jsx          // Start/Pause/Reset buttons
 │   │   ├── Settings.jsx          // Adjust session/break lengths
-│   │   ├── Stats.jsx             // Displays completed session count
+│   │   ├── Stats.jsx             // Displays completed session count + goal
+│   │   ├── PomoChart.jsx         // Daily pomodoro chart with Recharts
 │   │   └── ThemeToggle.jsx       // Light/Dark theme switch
 │   ├── context/
 │   │   └── ThemeContext.jsx      // Theme context logic
@@ -72,6 +76,7 @@ Open [http://localhost:5173](http://localhost:5173) in your browser.
 - [TailwindCSS](https://tailwindcss.com/) — Utility-first CSS
 - [Framer Motion](https://www.framer.com/motion/) — Animation library
 - [Lucide React](https://lucide.dev/) — Icons
+- [Recharts](https://recharts.org/) — Charting library for Pomodoro stats
 - [Vite](https://vitejs.dev/) — Fast dev server and build tool
 
 ---
@@ -100,47 +105,56 @@ Or use the UI inputs under "Session / Break" settings to adjust on the fly.
 ## 💾 Data Persistence
 
 - **Theme selection** is saved in `localStorage`
-- **Completed session count** is also stored in `localStorage` under the `completed` key
+- **Completed session count** is stored in `localStorage` under the `completed` key
+- **Daily goal** is saved under `dailyGoal`
+- **Daily session data** (by date) is stored under `dailyStats`
 
 ---
 
-## 📊 Stats
+## 📊 Stats & Tracking
 
-See how many Pomodoro sessions you've completed with a live counter at the bottom of the app.
+### ✅ Completed Sessions
+
+View how many Pomodoro sessions you’ve completed since you began using the app.
+
+### 🎯 Daily Goal Tracking
+
+Set and track a daily goal (e.g. 8 Pomodoros per day). See your progress toward that goal live.
+
+### 📈 Pomo Chart
+
+A bar chart visualizes how many Pomodoros you completed over the last 7 days. Powered by **Recharts**.
+
+---
+
+## 🔔 Notifications API
+
+The app supports browser notifications for:
+
+- ✅ Session complete
+- ✅ Break complete
+
+> Make sure to **allow notifications** when prompted by your browser.
 
 ---
 
 ## ✨ Animations
 
-The timer's SVG circle updates smoothly using CSS transitions, while the rest of the app structure is animation-ready with Framer Motion (you can expand on this for animated settings/stats, etc.).
+The timer circle uses smooth stroke transitions, and Framer Motion can animate components like settings, modals, or the stats area.
 
 ---
 
 ## 🧪 Available Scripts
 
-### Start development server
-
 ```bash
-npm run dev
-```
-
-### Build for production
-
-```bash
-npm run build
-```
-
-### Preview production build locally
-
-```bash
-npm run preview
+npm run dev       # Start development server
+npm run build     # Build for production
+npm run preview   # Preview production build
 ```
 
 ---
 
 ## 🧰 Tailwind Configuration
-
-Minimal `tailwind.config.js`:
 
 ```js
 /** @type {import('tailwindcss').Config} */
@@ -165,17 +179,17 @@ export default {
 
 ## 📸 Screenshots
 
-> Add screenshots here if needed:
-- Light/Dark Mode
-- Running Timer
-- Settings UI
-- Stats Display
+> Add your screenshots here for:
+- Light/Dark Mode toggle
+- Active timer with progress
+- Stats section
+- Pomodoro chart
 
 ---
 
 ## 🤝 Contributing
 
-Pull requests are welcome! For major changes, please open an issue first to discuss what you'd like to change.
+Pull requests are welcome! Open an issue first to propose changes, features, or bug fixes.
 
 ---
 
@@ -187,6 +201,7 @@ MIT © [HARIHARANS24](https://github.com/HARIHARANS24/pomodoro-react-tailwind/bl
 
 ## 🧠 Inspiration
 
-This app follows the Pomodoro Technique – a time management method that encourages working in focused intervals (typically 25 minutes) followed by short breaks.
+This app follows the **Pomodoro Technique** – a time management method that encourages working in focused intervals (typically 25 minutes) followed by short breaks.
 
 Stay focused, stay sharp! 💡
+
