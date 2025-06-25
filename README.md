@@ -18,7 +18,7 @@ A modern, feature-rich Pomodoro Timer built with **React**, **TailwindCSS**, and
 ✅ **LocalStorage Persistence**  
 
 ---
-
+ 
 ## 📁 Project Structure
 
 ```
