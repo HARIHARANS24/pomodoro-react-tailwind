@@ -81,7 +81,7 @@ Open [http://localhost:3000](http://localhost:3000) in your browser.
 
 ---
 
-## 🌙 Theming
+## 🌙 Theming 
 
 Toggle light/dark mode using the 🌙/☀️ button in the top-right corner. The selected theme is persisted using `localStorage`.
 
