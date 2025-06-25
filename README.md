@@ -4,7 +4,7 @@ A modern, feature-rich Pomodoro Timer built with **React**, **TailwindCSS**, and
 
 ---
 
-## 🔥 Features
+## 🔥 Features 
 
 ✅ **Session / Break Timers**  
 ✅ **Customizable Durations**  
