@@ -22,25 +22,30 @@ A modern, feature-rich Pomodoro Timer built with **React**, **TailwindCSS**, and
 ## 📁 Project Structure
 
 ```
-pomodoro-app/
-├── public/
-│   └── index.html
-├── src/
-│   ├── components/
-│   │   ├── TimerDisplay.jsx      // Main timer circle and countdown
-│   │   ├── Controls.jsx          // Start/Pause/Reset buttons
-│   │   ├── Settings.jsx          // Adjust session/break lengths
-│   │   ├── Stats.jsx             // Displays completed session count + goal
-│   │   ├── PomoChart.jsx         // Daily pomodoro chart with Recharts
-│   │   └── ThemeToggle.jsx       // Light/Dark theme switch
-│   ├── context/
-│   │   └── ThemeContext.jsx      // Theme context logic
-│   ├── App.jsx                   // Main app logic and layout
-│   ├── main.jsx                  // App entry point
-│   └── index.css                 // Tailwind base styles and custom styles
-├── tailwind.config.js           // Tailwind setup
-├── package.json                 // Project dependencies and scripts
-└── vite.config.js               // Vite configuration
+Directory structure:
+└── hariharans24-pomodoro-react-tailwind/
+    ├── README.md
+    ├── LICENSE
+    ├── package.json
+    ├── postcss.config.js
+    ├── tailwind.config.js
+    ├── public/
+    │   └── index.html
+    └── src/
+        ├── App.js
+        ├── index.js
+        ├── components/
+        │   ├── Controls.jsx
+        │   ├── PomoChart.jsx
+        │   ├── Settings.jsx
+        │   ├── Stats.jsx
+        │   ├── Tasks.jsx
+        │   ├── ThemeToggle.jsx
+        │   └── TimerDisplay.jsx
+        ├── context/
+        │   └── ThemeContext.jsx
+        └── styles/
+            └── index.css
 ```
 
 ---
